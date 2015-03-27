@@ -29,4 +29,17 @@
 	<img src="./images/image_01.png" width="500" height="200"/>
 	
 2. git clone 复制一个 Git 仓库			
-			
+	
+	<img src="./images/image_02.png" width="500" height="200"/>  
+
+	这样当前文件下就有一个 git-study 目录了，这个就是复制出来的git仓库。
+	
+	
+### 一次基本的操作流程
+&nbsp;&nbsp;&nbsp;&nbsp; 在开发过程中，我们要进行的操作就是：更新仓库，提交代码。
+下面我们就来执行下这样的操作。  
+
+1. 创建一个文件
+
+	
+		
