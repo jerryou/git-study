@@ -36,9 +36,9 @@
 	
 	
 ### 一次基本的操作流程
-&nbsp;&nbsp;&nbsp;&nbsp; 在开发过程中，我们要进行的操作就是：更新仓库，提交代码。
+在开发过程中，我们要进行的操作就是：更新仓库，提交代码。
 下面我们就来执行下这样的操作。 
-<img src="./images/image_03.png" width="500" height="200"/> 
+&nbsp;&nbsp;&nbsp;&nbsp; <img src="./images/image_03.png" width="500" height="200"/> 
 
 1. 创建一个文件  
 		
