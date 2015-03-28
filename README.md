@@ -120,3 +120,9 @@
 8. git reset
 
 		git reset HEAD 取消缓存已缓存的内容
+		
+9. git rm 将文件从缓存区移除  
+	&nbsp;&nbsp;&nbsp;&nbsp;  git rm 会将条目从缓存区中移除。这与 git reset HEAD 将条目取消缓存是有区别的。 “取消缓存”的意思就是将缓存区恢复为我们做出修改之前的样子。 在另一方面，git rm 则将该文件彻底从缓存区踢出，因此它不再下一个提交快照之内，进而有效地删除它。  
+	&nbsp;&nbsp;&nbsp;&nbsp;  默认情况下，git rm file 会将文件从缓存区和你的硬盘中（工作目录）删除。 如果要在工作目录中留着该文件，可以使用 git rm --cached
+				
+
