@@ -75,6 +75,23 @@
 > 2. 本地仓库：相对于远程仓库的一个clone，可以通过 git commit 将文件提交到本地仓库。
 > 3. 远程仓库：可以理解为git服务器，大家都从这个服务器上进行代码的clone，方便代码的管理。
 
+4. .gitignore 忽略某些文件  
+	一般我们总会有些文件无需纳入 Git 的管理，也不希望它们总出现在未跟踪文件列表。通常都是些自动生成的文件，比如日志文件，或者编译过程中创建的临时文件等。我们可以创建一个名为 .gitignore 的文件，列出要忽略的文件模式。如下：
+	
+		# 此为注释 – 将被 Git 忽略
+    	# 忽略所有 .a 结尾的文件
+    	*.a
+    	# 但 lib.a 除外
+    	!lib.a
+    	# 仅仅忽略项目根目录下的 TODO 文件，不包括 subdir/TODO
+    	/TODO
+    	# 忽略 build/ 目录下的所有文件
+    	build/
+    	# 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
+    	doc/*.txt
+		
+
+
 ### git常用命令说明
 
 1. git add 用来将文件纳入到版本控制     
@@ -125,4 +142,43 @@
 	&nbsp;&nbsp;&nbsp;&nbsp;  git rm 会将条目从缓存区中移除。这与 git reset HEAD 将条目取消缓存是有区别的。 “取消缓存”的意思就是将缓存区恢复为我们做出修改之前的样子。 在另一方面，git rm 则将该文件彻底从缓存区踢出，因此它不再下一个提交快照之内，进而有效地删除它。  
 	&nbsp;&nbsp;&nbsp;&nbsp;  默认情况下，git rm file 会将文件从缓存区和你的硬盘中（工作目录）删除。 如果要在工作目录中留着该文件，可以使用 git rm --cached
 				
+				
+10. git log
 
+		git log				
+		commit 82c0f35b9763612a490810e9b4cc106a42eab121
+		Author: Jerry2013 <jerry605948233@163.com>
+		Date:   Sat Mar 28 22:07:42 2015 +0800
+
+    		aaa
+
+		commit d7c4a976a26f22526a2eb96c4c15681534b7eb61
+		Author: Jerry2013 <jerry605948233@163.com>
+		Date:   Sat Mar 28 21:56:59 2015 +0800
+
+    		a
+
+		commit e629b17eaa816bd34914204a69a6d6a46c965ef5
+		Author: Jerry2013 <jerry605948233@163.com>
+		Date:   Sat Mar 28 21:56:36 2015 +0800
+
+		    aa
+
+		commit 878ee6a4fe8da30d3daac55594188bb7befc142d
+		Author: Jerry2013 <jerry605948233@163.com>
+		Date:   Sat Mar 28 21:50:55 2015 +0800
+
+		    git命令
+
+		commit dd3841a9f313a2cc29e784271823756939b866dc
+		Author: Jerry2013 <jerry605948233@163.com>
+		Date:   Sat Mar 28 13:48:46 2015 +0800
+
+    		命令
+    		
+	git log 会按提交时间列出所有的更新，最近的更新排在最上面。    
+	
+		git log -p -2
+		
+	<img src="./images/image_05.png" width="550" height="250"/>  
+	-p 选项展开显示每次提交的内容差异，用 -2 则仅显示最近的两次更新			
