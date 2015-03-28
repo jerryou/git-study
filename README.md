@@ -107,3 +107,16 @@
 		git status
 		
 	<img src="./images/image_04.png" width="500" height="200"/> 
+
+7. git diff 显示已写入缓存与已修改但尚未写入缓存的改动的区别
+
+		git diff #尚未缓存的改动
+		git diff –cached #查看已缓存的改动
+		git diff HEAD #查看已缓存的与未缓存的所有改动
+		git diff –stat #显示摘要而非整个 diff
+		
+	执行 git diff 来查看执行 git status 的结果的详细信息 —— 一行一行地显示这些文件是如何被修改或写入缓存的。		
+	
+8. git reset
+
+		git reset HEAD 取消缓存已缓存的内容
