@@ -62,4 +62,48 @@
 
 
 	
+> ### *备注：*  
+
+1. 如果是 git init 方式初始化的git仓库，想要提交到远程仓库上，首先必须得让本地仓库和远程仓库关联上。可以使用命令：git remote add [shortname] [url]   
 		
+		git remote add origin https://github.com/jerryou/git-study.git
+
+2. 如果已经是纳入了git追踪的文件，不需要进行 git add 的，可以直接通过commit命令提交到本地仓库
+
+3. 一个git管理有几个部分：工作空间、本地仓库、远程仓库	
+> 1. 工作空间：就是本地存放文件的地方（一个目录/一个文件夹）、平时我们主要在这个工作空间下进行代码的编辑等操作
+> 2. 本地仓库：相对于远程仓库的一个clone，可以通过 git commit 将文件提交到本地仓库。
+> 3. 远程仓库：可以理解为git服务器，大家都从这个服务器上进行代码的clone，方便代码的管理。
+
+### git常用命令说明
+
+1. git add 用来将文件纳入到版本控制     
+
+		git add .  	-- 将当前目录以及子目录下没有纳入控制的文件纳入控制
+		git add *.java -- 将当前目录以及子目录下没有纳入控制的.java文件纳入控制
+		git add README.md -- 将README.md文件纳入版本控制
+		
+2. git commit 
+		
+		git commit -m '备注'  -- 提交到本地仓库，并进行备注,如果不启勇  -m 参数添加说明 会启动一个vim 让用户添加说明
+		
+3. git pull  从远程获取最新版本并merge到本地
+
+		git pull
+		
+4. git push  提交到远程仓库
+
+		git push
+
+5. git fetch 	从远程获取最新版本到本地，不会自动merge 
+
+		git fetch origin master
+		git log -p master..origin/master
+		git merge origin/master
+		
+6. git status 查看你的文件在工作目录与缓存的状态
+
+		git status -s  -- 简短方式输出
+		git status
+		
+	<img src="./images/image_04.png" width="500" height="200"/> 
