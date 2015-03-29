@@ -218,8 +218,7 @@ git branch 列出、创建与管理工作上下文    git checkout 切换到新�
 > 下面  我们首先建立了一个分支（rmtwofiles），并切换到这个分支，删除了2个文件
 	<img src="./images/image_10.png" width="450" />  
 	现在我们	希望合并 rmtwofiles 分支到主分支  
-	<img src="./images/image_11.png" width="450" />   
-	 
-
+	<img src="./images/image_11.png" width="450" />      	
+	当然，在合并分支的时候，可能会遇到冲突的情况，我们可以参考：http://www.ihref.com/read-16369.html#2.1。这里有详细的说明。
 				
 	
