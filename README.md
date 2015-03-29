@@ -189,4 +189,37 @@
 		git tag -a v0.1 -m 'my version 0.1'  #新建标签 －a 指定名称 －m 标签说明
 		git show  ＃查看相应标签的版本信息，并连同显示打标签时的提交对象。
 		
+		
+### 分支
+
+git branch 列出、创建与管理工作上下文    git checkout 切换到新的分支上下文  
+
+1. git branch		
+> git branch 命令是 Git 中的通用分支管理工具，可以通过它完成多项任务。 我们先说你会用到的最多的命令 —— 列出分支、创建分支和删除分支。
+
+		git branch 列出可用的分支
+		git branch (branchname) 创建新分支
+<img src="./images/image_06.png" width="450" height="250"/>  
+
+		git checkout (branch) 切换分支
+		
+	<img src="./images/image_07.png" width="450" />  				
+当我们切换到“testing”分支的时候，我们添加的新文件被移除了。切换回“master”分支的时候，它们有重新出现了。  
+<img src="./images/image_08.png" width="450" />  
+
+		git checkout -b (branchname) 创建新分支，并立即切换到它
+		相当于 git branch newbranch; git checkout newbranch
+				
+	如果要删除分支，可以使用 git branch -d (branchname) 删除分支  
+	<img src="./images/image_09.png" width="450" />
+	
+2. git merge 将分支合并到你的当前分支	
+> 一旦某分支有了独立内容，你终究会希望将它合并回到你的主分支。 你可以使用 git merge 命令将任何分支合并到当前分支中去。  
+> 下面  我们首先建立了一个分支（rmtwofiles），并切换到这个分支，删除了2个文件
+	<img src="./images/image_10.png" width="450" />  
+	现在我们	希望合并 rmtwofiles 分支到主分支  
+	<img src="./images/image_11.png" width="450" />   
+	 
+
+				
 	
